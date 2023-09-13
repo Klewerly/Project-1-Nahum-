@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Hierarchy
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 44
+  controlID: 64
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 45
+  controlID: 65
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -536,9 +536,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 34.53177, y: -1.3387641, z: 7.3206816}
+    m_Target: {x: 51.538494, y: -1.5571628, z: 21.41162}
     speed: 2
-    m_Value: {x: 34.53177, y: -1.3387641, z: 7.3206816}
+    m_Value: {x: 51.538494, y: -1.5571628, z: 21.41162}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -585,13 +585,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.0059803333, y: -0.99254906, z: 0.054543857, w: -0.108823165}
+    m_Target: {x: -0.03261691, y: -0.8340593, z: 0.04960015, w: -0.5484829}
     speed: 2
-    m_Value: {x: -0.005980313, y: -0.9925456, z: 0.054543667, w: -0.10882279}
+    m_Value: {x: -0.03261671, y: -0.8340541, z: 0.04959984, w: -0.5484795}
   m_Size:
-    m_Target: 12.211753
+    m_Target: 11.451393
     speed: 2
-    m_Value: 12.211753
+    m_Value: 11.451393
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -647,9 +647,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 32fbffff
+      m_SelectedIDs: 90600000
+      m_LastClickedID: 24720
+      m_ExpandedIDs: 5ef2ffff32fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -883,8 +883,8 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 126a0000
-    m_LastClickedID: 27154
+    m_SelectedIDs: 026a0000
+    m_LastClickedID: 27138
     m_ExpandedIDs: 00000000f469000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0

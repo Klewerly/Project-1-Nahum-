@@ -60,6 +60,10 @@
     <Compile Include="Assets\Scripts\CameraMan.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\AnimationController.cs" />
+    <Compile Include="Assets\Scripts\OOP.cs" />
+    <Compile Include="Assets\Scripts\AgentStats.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\Npc.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
