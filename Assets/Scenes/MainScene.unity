@@ -18364,7 +18364,7 @@ GameObject:
   - component: {fileID: 1535580451}
   - component: {fileID: 1535580450}
   - component: {fileID: 1535580449}
-  - component: {fileID: 1535580448}
+  - component: {fileID: 1535580455}
   m_Layer: 0
   m_Name: Guardian
   m_TagString: Untagged
@@ -18372,25 +18372,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1535580448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1535580447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef20045c648451d46aeda5920b826a5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  patroolWayPoint:
-  - {fileID: 997066900}
-  - {fileID: 870247981}
-  - {fileID: 222927398}
-  - {fileID: 569989459}
-  - {fileID: 1626408969}
-  - {fileID: 1338916078}
 --- !u!195 &1535580449
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -18491,6 +18472,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: -0.31, z: 0}
+--- !u!114 &1535580455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535580447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef20045c648451d46aeda5920b826a5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patroolWayPoint:
+  - {fileID: 997066900}
+  - {fileID: 870247981}
+  - {fileID: 222927398}
+  - {fileID: 569989459}
+  - {fileID: 1626408969}
+  - {fileID: 1338916078}
 --- !u!4 &1548862548
 Transform:
   m_ObjectHideFlags: 0
