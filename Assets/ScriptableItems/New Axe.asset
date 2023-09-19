@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b5f5997b2b54da42942c89eea781397, type: 3}
   m_Name: New Axe
   m_EditorClassIdentifier: 
+  icon: {fileID: -893497335, guid: f880d5ba0cf152449976bc2b8a461c2b, type: 3}
   weight: 4
   price: 1
   damage: 1

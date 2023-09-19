@@ -5,10 +5,9 @@ using UnityEngine;
 
 public abstract class Items : ScriptableObject
 {
-
+    public Sprite icon;
     public float weight;
     public float price;
-
 
 }
 

@@ -58,21 +58,21 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\AgentStats.cs" />
     <Compile Include="Assets\Scripts\AiController.cs" />
+    <Compile Include="Assets\ScriptableItems\Scripts\Shield.cs" />
     <Compile Include="Assets\Scripts\OOP.cs" />
     <Compile Include="Assets\ScriptableItems\Scripts\Axe.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Inventory.cs" />
+    <Compile Include="Assets\Scripts\Items.cs" />
     <Compile Include="Assets\Scripts\CameraMan.cs" />
-    <Compile Include="Assets\ScriptableItems\Scripts\Gold.cs" />
-    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\AnimationController.cs" />
-    <Compile Include="Assets\Scripts\Npc.cs" />
     <Compile Include="Assets\Scripts\GiveStatsToItems.cs" />
     <Compile Include="Assets\ScriptableItems\Scripts\HealthPotion.cs" />
-    <Compile Include="Assets\Scripts\Items.cs" />
-    <Compile Include="Assets\ScriptableItems\Scripts\Sword.cs" />
-    <Compile Include="Assets\ScriptableItems\Scripts\Shield.cs" />
+    <Compile Include="Assets\ScriptableItems\Scripts\Gold.cs" />
     <Compile Include="Assets\ScriptableItems\Scripts\ManaPotion.cs" />
+    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\AnimationController.cs" />
+    <Compile Include="Assets\ScriptableItems\Scripts\Sword.cs" />
+    <Compile Include="Assets\Scripts\Npc.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

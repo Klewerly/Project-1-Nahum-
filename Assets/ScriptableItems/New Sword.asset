@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d42236eb88b7094c977d81264b71fa3, type: 3}
   m_Name: New Sword
   m_EditorClassIdentifier: 
+  icon: {fileID: -280867050, guid: f880d5ba0cf152449976bc2b8a461c2b, type: 3}
   weight: 2
   price: 1
   damage: 1

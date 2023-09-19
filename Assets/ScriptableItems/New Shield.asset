@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91f9be5b250e60a4887053a35c189ec6, type: 3}
   m_Name: New Shield
   m_EditorClassIdentifier: 
+  icon: {fileID: -131991976, guid: f880d5ba0cf152449976bc2b8a461c2b, type: 3}
   weight: 1
   price: 1
   defPoints: 5

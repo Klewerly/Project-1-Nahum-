@@ -7,18 +7,23 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-    [SerializeField] public List<GameObject> inventory = new List<GameObject>();
-    private Player player;
-    
+    [SerializeField] public List<Items> inventory = new List<Items>();
+    //[SerializeField] public Image icon;
+    //private GiveStatsToItems itemIcon;
+    //GiveStatsToItems item;
 
-    public void AddItem(Items item)
+
+
+    public void AddItem(Items _item)
     {
-        item = player.itemPickedUp;
-        inventory.Add(item);
 
+        inventory.Add(_item);
+       // icon.sprite = itemIcon.items.icon;
+       // icon.enabled = true;
 
     }
 
 
-   // public List<Items> Inventory = new List<Items>() - создаем лист из всего что есть в Итемс и его детей. Пока не нужно.
+
+
 }
