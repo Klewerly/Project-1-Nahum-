@@ -15,6 +15,8 @@ public abstract class Stats
     public float mana;
     public float age;
     public float height;
+    public float damage;
+    public float defence;
 }
 
 [Serializable]

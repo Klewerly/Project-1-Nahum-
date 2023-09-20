@@ -69,9 +69,11 @@
     <Compile Include="Assets\ScriptableItems\Scripts\HealthPotion.cs" />
     <Compile Include="Assets\ScriptableItems\Scripts\Gold.cs" />
     <Compile Include="Assets\ScriptableItems\Scripts\ManaPotion.cs" />
+    <Compile Include="Assets\Scripts\InventorySlot.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\AnimationController.cs" />
     <Compile Include="Assets\ScriptableItems\Scripts\Sword.cs" />
+    <Compile Include="Assets\Scripts\InventoryUI.cs" />
     <Compile Include="Assets\Scripts\Npc.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -20,21 +20,42 @@ public class AnimationController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
 
         if (speed.velocity.magnitude > 0)
         {
-            animator.SetBool("IsRunning", true);
+
             animator.Play("Running");
+            
 
         }
 
         else
         {
-            animator.SetBool("IsRunning", false);
+
             animator.Play("Breathing Idle");
 
         }
 
         return;
+
+
+
+
+
+            
+
+
+        
+
+
+
+    }
+
+
+    public void AnimationSheathWeapon()
+    {
+        animator.SetBool("Armed", true);
+
     }
 }

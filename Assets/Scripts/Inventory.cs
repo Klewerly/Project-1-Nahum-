@@ -8,22 +8,61 @@ using UnityEngine.UI;
 public class Inventory : MonoBehaviour
 {
     [SerializeField] public List<Items> inventory = new List<Items>();
-    //[SerializeField] public Image icon;
-    //private GiveStatsToItems itemIcon;
-    //GiveStatsToItems item;
+    [SerializeField] public InventorySlot[] inventorySlots;
+    private InventorySlot icon;
+    private InventorySlot button;
+    private InventorySlot itemInSlot;
+    [SerializeField] public InventoryUI slotsParent;
 
 
 
-    public void AddItem(Items _item)
+
+
+    public void Start()
+	{
+
+        icon = GetComponent<InventorySlot>();
+        button = GetComponent<InventorySlot>();
+        itemInSlot = GetComponent<InventorySlot>();
+        inventorySlots = slotsParent.slotsParent.GetComponentsInChildren<InventorySlot>();
+        
+    }
+
+
+	public void AddItem(Items _item)
     {
 
         inventory.Add(_item);
-       // icon.sprite = itemIcon.items.icon;
-       // icon.enabled = true;
+
+        
+
+        for (int i = 0; i < inventorySlots.Length; i++)
+        {
+
+            if (i < inventory.Count)
+            {
+                inventorySlots[i].itemInSlot = inventory[i];
+                inventorySlots[i].icon.sprite = inventory[i].icon;
+                inventorySlots[i].icon.enabled = true;
+
+
+            }
+
+        }
+
+
 
     }
 
+    
+
+
+    
+
+
+    
 
 
 
 }
+

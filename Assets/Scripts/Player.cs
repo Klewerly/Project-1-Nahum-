@@ -7,10 +7,13 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] PlayerStats playerStats;
+    [SerializeField] public PlayerStats playerStats;
     public Inventory inventory;
     public Slider slider;
     public GiveStatsToItems item;
+    [SerializeField] public GameObject inventoryPanel;
+    //public Animator lala;
+    
 
 
     //public Items itemPickedUp;
@@ -38,11 +41,27 @@ public class Player : MonoBehaviour
         {
             ItemCollider();
         }
+
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            inventoryCloseAndOpen();
+        }
+
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+
+            //lala.Play("Sword");
+
+
+        }
+
+
     }
 
     private void Awake()
     {
         inventory = GetComponent<Inventory>();
+        
     }
 
 
@@ -94,13 +113,24 @@ public class Player : MonoBehaviour
         }
 
 
+
         
 
 
-        
     }
+
+    public void inventoryCloseAndOpen()
+    {
+
+        inventoryPanel.active = !inventoryPanel.active;
+
+    }
+
 
     
 
+
+
+    
 
 }
