@@ -25,7 +25,8 @@ public class AnimationController : MonoBehaviour
         if (speed.velocity.magnitude > 0)
         {
 
-            animator.Play("Running");
+            animator.SetBool("IsRunning", true);
+            
             
 
         }
@@ -33,29 +34,26 @@ public class AnimationController : MonoBehaviour
         else
         {
 
-            animator.Play("Breathing Idle");
-
+            animator.SetBool("IsRunning", false);
         }
 
-        return;
 
 
-
-
-
-            
-
-
-        
 
 
 
     }
 
 
-    public void AnimationSheathWeapon()
+    public void TakeWeapon()
     {
-        animator.SetBool("Armed", true);
+        animator.SetTrigger("Armed");
 
     }
+
+    public void PutAwayWeapon()
+    {
+        animator.SetTrigger("UnArmed");
+    }
+
 }

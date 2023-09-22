@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AI;
+using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
@@ -12,8 +14,22 @@ public class Player : MonoBehaviour
     public Slider slider;
     public GiveStatsToItems item;
     [SerializeField] public GameObject inventoryPanel;
-    //public Animator lala;
-    
+    NavMeshAgent playeNavMesh;
+    private MeshRenderer axeModelHand;
+    private MeshRenderer swordModelHand;
+    private MeshRenderer axeModelHolder;
+    private MeshRenderer swordModelHolder;
+    Npc enemyStats;
+
+
+
+    AnimationController animation;
+    public bool armedNow;
+
+
+
+
+
 
 
     //public Items itemPickedUp;
@@ -23,6 +39,13 @@ public class Player : MonoBehaviour
     void Start()
     {
         slider.value = playerStats.health;
+        animation = GetComponent<AnimationController>();
+        playeNavMesh = GetComponent<NavMeshAgent>();
+        axeModelHolder = GameObject.Find("Model_Axe_Holder").GetComponent<MeshRenderer>();
+        swordModelHolder = GameObject.Find("Model_Sword_Holder").GetComponent<MeshRenderer>();
+        axeModelHand = GameObject.Find("Model_Axe_Hand").GetComponent<MeshRenderer>();
+        swordModelHand = GameObject.Find("Model_Sword_Hand").GetComponent<MeshRenderer>();
+        enemyStats = GameObject.Find("Guardian").GetComponent<Npc>();
 
 
     }
@@ -30,6 +53,8 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
         if (playerStats.health < 100)
         {
             PlayerHpSlider();
@@ -44,16 +69,75 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.I))
         {
+            playeNavMesh.SetDestination(playeNavMesh.transform.position);
             inventoryCloseAndOpen();
+            if (inventoryPanel.active == true)
+            {
+                playeNavMesh.speed = 0;
+            }
+            if (inventoryPanel.active == false)
+            {
+                playeNavMesh.speed = 3.5f;
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.G))
         {
 
-            //lala.Play("Sword");
+            if (playerStats.damage > 0)
+            {
+                armedNow = !armedNow;
+
+
+                if (armedNow == true)
+                {
+
+
+                    if (axeModelHolder.enabled == true)
+                    {
+                        animation.TakeWeapon();
+                        axeModelHolder.enabled = false;
+                        axeModelHand.enabled = true;
+                    }
+
+                    if (swordModelHolder.enabled == true)
+                    {
+                        animation.TakeWeapon();
+                        swordModelHolder.enabled = false;
+                        swordModelHand.enabled = true;
+                    }
+
+
+                }
+
+                else
+                {
+
+
+                    if (axeModelHand.enabled == true)
+                    {
+                        animation.PutAwayWeapon();
+                        StartCoroutine(AxeModelsOff(1));
+
+                    }
+
+                    if (swordModelHand.enabled == true)
+                    {
+                        animation.PutAwayWeapon();
+                        StartCoroutine(SwordModelsOff(1));
+
+                    }
+
+
+                }
+            }
+
 
 
         }
+
+
+
 
 
     }
@@ -61,7 +145,7 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         inventory = GetComponent<Inventory>();
-        
+
     }
 
 
@@ -114,7 +198,7 @@ public class Player : MonoBehaviour
 
 
 
-        
+
 
 
     }
@@ -127,10 +211,28 @@ public class Player : MonoBehaviour
     }
 
 
-    
+    private IEnumerator SwordModelsOff(float timeDelay)
+    {
+        yield return new WaitForSeconds(timeDelay);
+        swordModelHand.enabled = false;
+        swordModelHolder.enabled = true;
+    }
 
 
+    private IEnumerator AxeModelsOff(float timeDelay)
+    {
+        yield return new WaitForSeconds(timeDelay);
+        axeModelHand.enabled = false;
+        axeModelHolder.enabled = true;
+    }
 
-    
+
+    public void DealDamage()
+    {
+        enemyStats.npcStats.health = enemyStats.npcStats.health - playerStats.damage;
+
+    }
+
 
 }
+    

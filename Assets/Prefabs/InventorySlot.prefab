@@ -133,7 +133,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 1
+        m_CallState: 2
       - m_Target: {fileID: 2433756490521631033}
         m_TargetAssemblyTypeName: InventorySlot, Assembly-CSharp
         m_MethodName: DressItem
@@ -145,7 +145,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 1
+        m_CallState: 2
 --- !u!1 &3788751721088852224
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,3 +284,7 @@ MonoBehaviour:
   icon: {fileID: 698471297121971464}
   button: {fileID: 1335438469662671358}
   itemInSlot: {fileID: 0}
+  itemModel:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

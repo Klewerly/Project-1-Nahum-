@@ -9,6 +9,7 @@ public class Inventory : MonoBehaviour
 {
     [SerializeField] public List<Items> inventory = new List<Items>();
     [SerializeField] public InventorySlot[] inventorySlots;
+    [SerializeField] public GameObject[] itemModel;
     private InventorySlot icon;
     private InventorySlot button;
     private InventorySlot itemInSlot;

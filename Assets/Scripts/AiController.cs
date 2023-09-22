@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class AiController : MonoBehaviour
 {
     NavMeshAgent guardian;
     [SerializeField] private GameObject[] patroolWayPoint;
     private int patroolPoints;
-
+    
 
 
 
@@ -46,8 +47,8 @@ public class AiController : MonoBehaviour
 
 
     }
+
     
 
 
-    
 }

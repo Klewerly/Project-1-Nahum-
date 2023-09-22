@@ -11,7 +11,8 @@ public class CameraMan : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        offset = new Vector3(transform.position.x + -30, transform.position.y + 2, transform.position.z + -20);
+        //offset = new Vector3(transform.position.x + -30, transform.position.y + 2, transform.position.z + -20);
+        offset = new Vector3(5, 7, -5);
         
     }
 

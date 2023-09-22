@@ -19,6 +19,7 @@ public class InventorySlot : MonoBehaviour
     private MeshRenderer axeModel;
     private MeshRenderer swordModel;
     private MeshRenderer shieldModel;
+
     //private InventorySlot itemToDress;
 
 
@@ -26,8 +27,8 @@ public class InventorySlot : MonoBehaviour
     public void Awake()
     {
         playerStats = GameObject.Find("Player").GetComponent<Player>();
-        axeModel = GameObject.Find("Model_Axe").GetComponent<MeshRenderer>();
-        swordModel = GameObject.Find("Model_Sword").GetComponent<MeshRenderer>();
+        axeModel = GameObject.Find("Model_Axe_Holder").GetComponent<MeshRenderer>();
+        swordModel = GameObject.Find("Model_Sword_Holder").GetComponent<MeshRenderer>();
         shieldModel = GameObject.Find("Model_Shield").GetComponent<MeshRenderer>();
 
     }
@@ -45,98 +46,109 @@ public class InventorySlot : MonoBehaviour
 
     public void ItemActiveIndicator()
     {
-        itemActive = !itemActive;
-
-        if (itemActive == true)
+        if (playerStats.armedNow == false)
         {
-            image = GetComponentInChildren<Image>();
-            image.enabled = true;
+            itemActive = !itemActive;
 
+            if (itemActive == true)
+            {
+                image = GetComponentInChildren<Image>();
+                image.enabled = true;
+
+            }
+
+            else
+            {
+                image.enabled = false;
+            }
         }
 
-        else
-        {
-            image.enabled = false;
-        }
     }
     public void DressItem()
     {
+        if (playerStats.armedNow == false)
+        {
         isDressed = !isDressed;
 
-        if (isDressed == true)
-        {
-
-
-            if (itemInSlot is Weapons weapons)
+            if (isDressed == true)
             {
-                playerStats.playerStats.damage += weapons.damage;
 
-                if (weapons is Axe axe)
+
+                if (itemInSlot is Weapons weapons)
                 {
-                    axeModel.enabled = true;
+                    playerStats.playerStats.damage += weapons.damage;
+
+                    if (weapons is Axe axe)
+                    {
+                        axeModel.enabled = true;
+
+
+
+
+
+
+                    }
+
+                    if (weapons is Sword sword)
+                    {
+
+                        swordModel.enabled = true;
+
+                    }
 
 
 
                 }
 
-                if (weapons is Sword sword)
+                if (itemInSlot is Defense shield)
                 {
-
-                    swordModel.enabled = true;
-
-                }
+                    playerStats.playerStats.defence += shield.defPoints;
+                    shieldModel.enabled = true;
 
 
 
-            }
-
-            if (itemInSlot is Defense shield)
-            {
-                playerStats.playerStats.defence += shield.defPoints;
-                shieldModel.enabled = true;
-
-
-
-            }
-
-
-        }
-
-        else
-        {
-            if (itemInSlot is Weapons weapons)
-            {
-                playerStats.playerStats.damage -= weapons.damage;
-
-                if (weapons is Axe axe)
-                {
-                    axeModel.enabled = false;
-
-
-                }
-
-                if (weapons is Sword sword)
-                {
-                    swordModel.enabled = false;
 
 
                 }
 
 
-
-
             }
 
-            if (itemInSlot is Defense shield)
+            else
             {
-                playerStats.playerStats.defence -= shield.defPoints;
-                shieldModel.enabled = false;
+                if (itemInSlot is Weapons weapons)
+                {
+                    playerStats.playerStats.damage -= weapons.damage;
+
+                    if (weapons is Axe axe)
+                    {
+                        axeModel.enabled = false;
 
 
+                    }
+
+                    if (weapons is Sword sword)
+                    {
+                        swordModel.enabled = false;
+
+
+                    }
+
+
+
+
+                }
+
+                if (itemInSlot is Defense shield)
+                {
+                    playerStats.playerStats.defence -= shield.defPoints;
+                    shieldModel.enabled = false;
+
+
+
+                }
 
             }
-
-
 
         }
     }
