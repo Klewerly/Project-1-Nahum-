@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\CameraMan.cs" />
     <Compile Include="Assets\Scripts\GiveStatsToItems.cs" />
     <Compile Include="Assets\ScriptableItems\Scripts\HealthPotion.cs" />
+    <Compile Include="Assets\Scripts\SaveLoadPosition.cs" />
     <Compile Include="Assets\ScriptableItems\Scripts\Gold.cs" />
     <Compile Include="Assets\ScriptableItems\Scripts\ManaPotion.cs" />
     <Compile Include="Assets\Scripts\InventorySlot.cs" />
@@ -75,7 +76,6 @@
     <Compile Include="Assets\ScriptableItems\Scripts\Sword.cs" />
     <Compile Include="Assets\Scripts\InventoryUI.cs" />
     <Compile Include="Assets\Scripts\Npc.cs" />
-    <Compile Include="Assets\Scripts\SaveLoadPosition.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
